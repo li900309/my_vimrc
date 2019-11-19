@@ -66,4 +66,4 @@ Plugin 'https://github.com/vim-scripts/AutoClose'
 " ...
 
 filetype plugin indent on     " required
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
