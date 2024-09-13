@@ -15,6 +15,10 @@ autocmd vimenter * wincmd w
 nnoremap <space> za
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 let NERDTreeWinSize = 24
 " Easymotion 更改快捷键
 " map f <Plug>(easymotion-prefix)
@@ -56,7 +60,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 " scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/garbas/vim-snipmate.git'
 Plugin 'https://github.com/tomtom/tlib_vim.git'
