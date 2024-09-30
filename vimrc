@@ -1,5 +1,5 @@
-"colorscheme peachpuff"
 syntax on    
+colorscheme peachpuff
 set number
 set hlsearch
 set incsearch
@@ -14,6 +14,13 @@ autocmd vimenter * NERDTree
 autocmd vimenter * wincmd w
 nnoremap <space> za
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "normal! g`\"" |
+\ endif
+
+autocmd VimLeave * mksession! ~/.vim_session.vim
 
 set tabstop=4
 set shiftwidth=4
@@ -37,6 +44,7 @@ let g:EasyMotion_smartcase = 1
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set viminfo='1000,f1
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
